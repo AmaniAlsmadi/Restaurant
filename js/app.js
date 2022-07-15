@@ -31,15 +31,18 @@ const cell2 = newRow.insertCell(1);
 const cell3 = newRow.insertCell(2);
 const cell4 = newRow.insertCell(3);
 
-let foodID = randomId();
+let foodId = randomId();
 let foodName = event.target.foodName.value;
 let foodType = event.target.typeFood.value;
 let price = event.target.price.value;
-cell1.innerHTML = foodID;
+cell1.innerHTML = foodId;
 cell2.innerHTML = foodName;
 cell3.innerHTML = foodType;
 cell4.innerHTML = price;
 
 console.log( this.foodId, foodName, foodType, price)
 }
+
+
+
 // ID Name Type Price
