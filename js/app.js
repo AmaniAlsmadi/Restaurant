@@ -48,17 +48,5 @@ function saveData() {
     console.log(menu);
    
 }
-
-/*function getData() {
-    
-    let retrivedData =localStorage.getItem("menu");
-    let parsedData = JSON.parse(retrivedData);
-    console.log(retrivedData);
-
-    if (parsedData != null) {
-        for (let i = 0; i < parsedData.length; i++) {
-            new Food(parsedData[i].foodId ,parsedData[i].foodName, parsedData[i].foodType, parsedData[i].price);
-        }}
-        
-}*/
+  
 

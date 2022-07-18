@@ -15,7 +15,7 @@ function Food(foodId, foodName,foodType, price) {
     getData();
 }
 
- Food.prototype.render = function (menu){
+ Food.prototype.render = function (){
    
     
     const myTable = document.getElementById('myTable');
@@ -25,10 +25,10 @@ function Food(foodId, foodName,foodType, price) {
     const cell3 = newRow.insertCell(2);
     const cell4 = newRow.insertCell(3);
 
-    cell1.textContent = menu.foodId;
-    cell2.textContent = menu.foodName;
-    cell3.textContent = menu.foodType;
-    cell4.textContent = menu.price;
+    cell1.textContent = foodId;
+    cell2.textContent = foodName;
+    cell3.textContent = foodType;
+    cell4.textContent = price;
     }
 
     
@@ -43,15 +43,7 @@ function Food(foodId, foodName,foodType, price) {
             }
         }
     
-        /*if (parsedData != null) {
-            for (let i = 0; i < parsedData.length; i++) {
-                new Food(parsedData[i].foodId ,parsedData[i].foodName, parsedData[i].foodType, parsedData[i].price);
-                return;
-            }}
-            for ( i= 0 ; i< menu.length; i++){
-                menu[i].render();
-                return;
-            }*/
+    
     } 
     
    getData();
