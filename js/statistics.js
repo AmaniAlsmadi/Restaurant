@@ -19,7 +19,7 @@ function Food(foodId, foodName,foodType, price) {
    
     
     const myTable = document.getElementById('myTable');
-    const newRow = myTable.insertRow();
+    const newRow = myTable.insertRow(1);
     const cell1 = newRow.insertCell(0);
     const cell2 = newRow.insertCell(1);
     const cell3 = newRow.insertCell(2);
@@ -50,3 +50,8 @@ function Food(foodId, foodName,foodType, price) {
   
 
    
+  
+
+
+
+ 

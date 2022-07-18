@@ -31,6 +31,13 @@ function handleSubmit(event) {
      new Food(foodId, foodName, foodType, price);
     
     //console.log(foodId, foodName, foodType, price);
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
 
     saveData();
     
@@ -48,5 +55,33 @@ function saveData() {
     console.log(menu);
    
 }
-  
 
+
+const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+  
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
