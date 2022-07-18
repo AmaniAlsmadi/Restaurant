@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Oswald&display=swap"
         rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -28,6 +30,8 @@
     </header>
     <main>
 
+
+        
         <div class="div">
             <div id="sect">
                 <form id="formID">
@@ -37,11 +41,11 @@
                     <input type="text" name="foodName" id="foodName" /><br>
                     <br>
 
-                    <label for="typeFood"> Foods types :</label><br>
+                    <label for="foodType"> Foods types :</label><br>
                     <br>
-                    <select name="typeFood" id="typeFood">
-                        <option value="Fruit">Fruit and vegetables</option>
-                        <option value="starchy">Starchy food</option>
+                    <select name="foodType" id="foodType">
+                        <option value="Fruit-and-vegetables">Fruit and vegetables</option>
+                        <option value="starchy-food">Starchy food</option>
                         <option value="dairy">Dairy</option>
                         <option value="protein">Protein</option>
                         <option value="fat">Fat</option>
@@ -59,6 +63,9 @@
                 </form>
 
             </div>
+            <div id="chart">
+                <canvas id="myChart"></canvas>
+              </div>
     </main>
     <footer>
 
@@ -66,8 +73,9 @@
             <p>conect us <br> <a href="https://www.facebook.com/engamani.sami.7">on facebook</a></p>
         </div>
     </footer>
+
     <script src="./js/app.js"></script>
-    <script src="./js/statistics.js"> </script>
+
 </body>
 
 </html>
