@@ -47,19 +47,19 @@ header {
 }
 .div{
   overflow: hidden;
-}
+  margin-left: 100px;
 
-#sect{
-  float: left;
-  /*background-image: url('./assets/food.jpg');
-  background-size: 700px 600px;*/
 }
+ .sect{
+  display: block;
+  
+ }
+
 .div2 {
-  margin-left: 400px;
+  margin-left: 200px;
 
 }
 #formID {
-  
   /*justify-content: space-between;
   align-content: space-around;*/
   padding: 30px 30px;
