@@ -1,7 +1,7 @@
 'use strict';
 const menu = [];
 
-function Food(foodId, foodName,foodType, price) {
+function Food(foodId, foodName, foodType, price) {
 
     this.foodId = foodId;
     this.foodName = foodName;
@@ -21,26 +21,25 @@ form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
     event.preventDefault();
 
-
+    
     let foodId = randomId();
     let foodName = event.target.foodName.value;
     let foodType = event.target.foodType.value;
     let price = event.target.price.value;
-
-
-     new Food(foodId, foodName, foodType, price);
     
-    //console.log(foodId, foodName, foodType, price);
+    new Food(foodId, foodName, foodType, price);
+
+    //library alert
     Swal.fire({
         position: 'top',
         icon: 'success',
         title: 'Your work has been saved',
         showConfirmButton: false,
         timer: 1500
-      })
+    })
 
     saveData();
-    
+
 }
 
 function randomId() {
@@ -50,10 +49,10 @@ function randomId() {
 
 
 function saveData() {
-   
+
     localStorage.setItem("menu", JSON.stringify(menu));
     console.log(menu);
-   
+
 }
 
 
@@ -64,24 +63,24 @@ const labels = [
     'April',
     'May',
     'June',
-  ];
+];
 const data = {
     labels: labels,
     datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0, 10, 5, 2, 20, 30, 45],
     }]
-  };
+};
 
-  const config = {
+const config = {
     type: 'line',
     data: data,
     options: {}
-  };
-  
-  const myChart = new Chart(
+};
+
+const myChart = new Chart(
     document.getElementById('myChart'),
     config
-  );
+);
